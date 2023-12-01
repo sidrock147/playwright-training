@@ -85,7 +85,7 @@ devMiddleware.waitUntilValid(() => {
   // when env is testing, don't need open it
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     // opn(uri)
-    spawn('open', [uri]);
+    //spawn('open', [uri]);
   }
   _resolve()
 })
