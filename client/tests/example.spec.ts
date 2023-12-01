@@ -23,3 +23,12 @@ test('click search link', async ({ page }) => {
   // Click the get started link.
   await page.getByText('Search', { exact: true }).click();
 });
+
+test('click API Link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the API link.
+  await page.getByText('API', { exact: true }).click();
+
+  await expect(page.getByText('APIResponse',{exact: true})).toBeVisible();
+});
